@@ -92,18 +92,18 @@ function Header() {
 
             <div className="row px-4">
               <div className="xl:w-1/2 lg:w-1/2 md:w-1/2 w-full flex items-center">
-                <div className="header-contact header-contact-phone">
+                <div className="header-contact header-contact-phone flex">
                   <span className="ti-headphone"></span>
-                  <p className="phone-number">+8801781013468</p>
+                  <p className="phone-number">+8801738240159</p>
                 </div>
-                <div className="header-contact header-contact-email">
+                <div className="header-contact header-contact-email flex">
                   <span className="ti-email"></span>
                   <p className="email-name">
                     <a
                       href={`/email/cse1605033brur@gmail.com`}
                       className="text-white"
                     >
-                      cse1605033brur@gmail.com
+                      cse1905031brur@gmail.com
                     </a>
                   </p>
                 </div>

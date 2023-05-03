@@ -20,7 +20,8 @@ const Footer = () => {
             <div className=" lg:flex md:justify-between">
                 <div className="pr-6 md:mb-0 text-center">
                     <p className='text-xl font-bold text-white'>Our Campus</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28757.31908303101!2d89.27436679431015!3d25.715517242069257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e32d9bb08522bb%3A0x83741b8b6c8ee4ee!2sBegum%20Rokeya%20University%2C%20Rangpur!5e0!3m2!1sen!2sbd!4v1678504485856!5m2!1sen!2sbd" width="450" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title='Brur Campus'></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28757.31908303101!2d89.27436679431015!3d25.715517242069257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e32d9bb08522bb%3A0x83741b8b6c8ee4ee!2sBegum%20Rokeya%20University%2C%20Rangpur!5e0!3m2!1sen!2sbd!4v1678504485856!5m2!1sen!2sbd" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title='Brur Campus'></iframe>
+                    
                 </div>
                 <div className="">
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
