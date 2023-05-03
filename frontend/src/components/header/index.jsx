@@ -86,7 +86,7 @@ function Header() {
   }
   return (
     <>
-      <header id="home">
+      <header>
         <div className="w-full">
           <div className="header-top bg-primary_bg dark:bg-black">
 

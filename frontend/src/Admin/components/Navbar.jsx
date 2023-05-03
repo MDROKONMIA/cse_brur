@@ -47,11 +47,11 @@ const AdminNavbar = () => {
                         Sign out
                     </Dropdown.Item>
                 </Dropdown>
-                <Navbar.Toggle />
             </div>
-            <Navbar.Collapse>
+            {/* <Navbar.Collapse>
                 <h5 className='text-4xl dark:text-gray-300 text-gray-900 font-extrabold'>CSE BRUR Dashboard</h5>
-            </Navbar.Collapse>
+            </Navbar.Collapse> */}
+            <h5 className='text-4xl dark:text-gray-300 text-gray-900 font-extrabold'>CSE BRUR Dashboard</h5>
         </Navbar>
     )
 }

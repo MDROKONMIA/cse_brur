@@ -11,7 +11,7 @@ function Layout() {
         
             <div className='dark:bg-gray-900 h-full'>
                 <Sidebar />
-                <div className="sm:ml-64 p-2 relative">
+                <div className="ml-44 md:ml-64 p-2 relative">
                     <Navbar/>
                     <SimpleBreadcrumbs/>
                     <Outlet />

@@ -60,7 +60,7 @@ function Sidebar() {
 
     <aside
       id="sidebar-multi-level-sidebar"
-      className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      className="fixed top-0 left-0 z-40 w-40 md:w-64 h-screen transition-transform xxl:-translate-x-full sm:translate-x-0"
       aria-label="Sidebar"
     >
       <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
@@ -105,7 +105,7 @@ function Sidebar() {
                     <li>
                       <Link
                         to={subList.url}
-                        className="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        className="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-4 md:pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                       >
                         <span className="pr-2">
                           {" "}
