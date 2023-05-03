@@ -8,7 +8,6 @@ import store from "./store";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { MaterialUIControllerProvider } from "./context";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "react-multi-carousel/lib/styles.css";
 
 const root = createRoot(document.getElementById("root"));

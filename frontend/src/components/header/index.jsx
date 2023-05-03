@@ -90,7 +90,7 @@ function Header() {
         <div className="w-full">
           <div className="header-top bg-primary_bg dark:bg-black">
 
-            <div className="row px-4">
+            <div className="md:flex px-4">
               <div className="xl:w-1/2 lg:w-1/2 md:w-1/2 w-full flex items-center">
                 <div className="header-contact header-contact-phone flex">
                   <span className="ti-headphone"></span>
@@ -108,7 +108,7 @@ function Header() {
                   </p>
                 </div>
               </div>
-              <div className="xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-full">
+              <div className="xl:w-1/2 lg:w-1/2 md:w-1/2 w-full">
                 <div className="header-social-icon-list">
                   <ul>
                     <li>
@@ -179,7 +179,8 @@ function Header() {
                 {mainMenu.map((menu) => (
                   <>
                     <li>
-                      <a className="dark:text-white" href={menu.url}>{menu.title}</a>
+                      <span className="dark:text-white">{menu.title}</span>
+                      {/* <a className="dark:text-white">{menu.title}</a> */}
 
                       {menu.submenu ? (
                         <ul className="submenu">
