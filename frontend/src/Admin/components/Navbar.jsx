@@ -1,7 +1,7 @@
 import { Avatar, Dropdown, Navbar } from 'flowbite-react'
 import React from 'react'
 import { useDispatch, useSelector, } from 'react-redux'
-import {useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { logout } from '../../actions/userAction'
 
@@ -17,7 +17,7 @@ const AdminNavbar = () => {
         navigate("/login");
 
     }
-    const {user}=useSelector(state=>state.user);
+    const { user } = useSelector(state => state.user);
 
     return (
         <Navbar
@@ -25,7 +25,8 @@ const AdminNavbar = () => {
             rounded={true}
             className="mb-2"
         >
-            <div className="flex md:order-2">
+            <h5 className='text-lg md:text-2xl lg:text-4xl dark:text-gray-300 text-gray-900 font-extrabold'>CSE BRUR Dashboard</h5>
+            <div className="flex">
                 <Dropdown
                     arrowIcon={false}
                     inline={true}
@@ -39,8 +40,8 @@ const AdminNavbar = () => {
                             {user.email}
                         </span>
                     </Dropdown.Header>
-                    <Dropdown.Item onClick={()=>navigate("/admin")}>
-                       Dashboard
+                    <Dropdown.Item onClick={() => navigate("/admin")}>
+                        Dashboard
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item onClick={handleSignOut}>
@@ -51,8 +52,9 @@ const AdminNavbar = () => {
             {/* <Navbar.Collapse>
                 <h5 className='text-4xl dark:text-gray-300 text-gray-900 font-extrabold'>CSE BRUR Dashboard</h5>
             </Navbar.Collapse> */}
-            <h5 className='text-4xl dark:text-gray-300 text-gray-900 font-extrabold'>CSE BRUR Dashboard</h5>
         </Navbar>
+
+
     )
 }
 

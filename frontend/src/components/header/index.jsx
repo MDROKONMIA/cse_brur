@@ -179,7 +179,7 @@ function Header() {
                 {mainMenu.map((menu) => (
                   <>
                     <li>
-                      <span className="dark:text-white">{menu.title}</span>
+                      <span className="dark:text-white cursor-pointer">{menu.title}</span>
                       {/* <a className="dark:text-white">{menu.title}</a> */}
 
                       {menu.submenu ? (
