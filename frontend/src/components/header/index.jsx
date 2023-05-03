@@ -100,7 +100,7 @@ function Header() {
                   <span className="ti-email"></span>
                   <p className="email-name">
                     <a
-                      href={`/email/cse1605033brur@gmail.com`}
+                      href={`/email/cse1905031brur@gmail.com`}
                       className="text-white"
                     >
                       cse1905031brur@gmail.com
