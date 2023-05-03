@@ -90,7 +90,7 @@ function Header() {
         <div className="w-full">
           <div className="header-top bg-primary_bg dark:bg-black">
 
-            <div className="md:flex px-4">
+            <div className="sm:flex px-4">
               <div className="xl:w-1/2 lg:w-1/2 md:w-1/2 w-full flex items-center">
                 <div className="header-contact header-contact-phone flex">
                   <span className="ti-headphone"></span>
