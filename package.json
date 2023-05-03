@@ -1,0 +1,40 @@
+{
+  "name": "cse_brur",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MDROKONMIA/cse_brur.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MDROKONMIA/cse_brur/issues"
+  },
+  "homepage": "https://github.com/MDROKONMIA/cse_brur#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cloudinary": "^1.35.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.1",
+    "path": "^0.12.7",
+    "puppeteer": "^19.7.3",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,57 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+
+.ProductCardContainer {
+  width: 275px;
+  height: 360px;
+  margin: 1vmax;
+  border: 0.5px solid rgba(0, 0, 0, 0.278);
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 20px !important;
+} 
+.ProductCardContainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: translateY(-0.8rem);
+}
+
+.cardImage {
+  width: 275px;
+  height: 250px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  object-fit: cover;
+}
+.ProductInfo {
+  justify-content: space-between;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 0.6vh 600 "Roboto" !important;
+  margin-bottom: 5px;
+}
+
+.ProductInfo > h1 {
+  /* width: 50%; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #525252;
+  font-size: 2.2vh;
+}
+
+.ProductInfo >p {
+  /* width: 50%; */
+ margin-bottom: 0;
+}
+
+@media screen and(max-width:600px) {
+  .ProductCardContainer,
+  .cardImage {
+    width: 25vmax;
+  }
+}
