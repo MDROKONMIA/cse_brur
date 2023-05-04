@@ -5,6 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify"
 import { clearErrors, deleteTeacher, getAllTeachers } from "../../../actions/allAction"
 import { DELETE_TEACHER_RESET } from "../../../constants/teacherConstants";
+import MetaData from "../../../components/Layout/MetaData";
 
 function AllTeachers() {
   const navigate = useNavigate();
@@ -40,7 +41,8 @@ function AllTeachers() {
 
   return (
     <>
-      <div className="text-black text-center text-3xl mb-2 border-b-2 dark:text-white uppercase  ">Teacher</div>
+      <MetaData title={"All Teachers"}/>
+      <div className="text-black text-center text-3xl mb-2 border-b-2 dark:text-white uppercase  ">Teachers</div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className=" h-16 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-200">

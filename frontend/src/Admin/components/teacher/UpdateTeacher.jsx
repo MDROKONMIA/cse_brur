@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { clearErrors, getTeacherDetails, teacherUpdate } from "../../../actions/allAction";
 import { UPDATE_TEACHERS_RESET } from "../../../constants/teacherConstants";
 import FormInput from "../FormInput";
+import MetaData from "../../../components/Layout/MetaData";
 
 function UpdateTeacher() {
     const { id } = useParams();
@@ -82,6 +83,7 @@ function UpdateTeacher() {
     }, [dispatch, error, isUpdated, id, navigate, updateError, message, teacher]);
     return (
         <>
+            <MetaData title={"Edit Teacher's Profile"}/>
             <div className="text-black text-center text-3xl mb-2 border-b-2 dark:text-white ">Edit Teacher Information</div>
             <form className="w-full" encType="multipart/form-data" onSubmit={handleSubmit}>
                 <div className="grid gap-6 mb-6 md:grid-cols-2">

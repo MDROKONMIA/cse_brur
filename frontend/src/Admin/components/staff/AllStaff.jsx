@@ -5,6 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { clearErrors, deleteStaff, getAllStaffs } from "../../../actions/staffAction";
 import { STAFF_DELETE_RESET } from "../../../constants/staffContants";
+import MetaData from "../../../components/Layout/MetaData";
 
 function AllStaffs() {
   const dispatch = useDispatch();
@@ -41,6 +42,7 @@ function AllStaffs() {
   }, [error, dispatch, message, navigate,currentPage,deleteError, isDeleted, keyword]);
   return (
     <>
+      <MetaData title={"All Staffs"}/>
       <div className="text-black text-center text-3xl mb-2 border-b-2 dark:text-white uppercase">Staff</div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">

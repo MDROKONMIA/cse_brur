@@ -5,6 +5,7 @@ import FormInput from "../FormInput";
 import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import { Button } from "flowbite-react";
+import MetaData from "../../../components/Layout/MetaData";
 
 function AddNewStaff() {
   const dispatch = useDispatch();
@@ -70,7 +71,8 @@ function AddNewStaff() {
   }
 
     return (
-    <>
+      <>
+        <MetaData title={"Add Staff"}/>
       <div className="text-black text-center text-3xl mb-2 border-b-2 dark:text-white uppercase ">Add Staff</div>
       <form className="w-full" encType="multipart/form-data" onSubmit={handleSubmit}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">

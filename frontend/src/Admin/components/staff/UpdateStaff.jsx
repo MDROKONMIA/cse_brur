@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import { useNavigate, useParams } from "react-router-dom";
 import { STAFF_UPDATE_RESET } from "../../../constants/staffContants";
 import { Button } from "flowbite-react";
+import MetaData from "../../../components/Layout/MetaData";
 
 function UpdateStaff() {
   const { staffId } = useParams();
@@ -92,6 +93,7 @@ function UpdateStaff() {
 
   return (
     <>
+      <MetaData title={"Edit Staff's Profile"}/>
       <div className="text-black text-center text-3xl mb-2 border-b-2 dark:text-white ">Edit Staff  Information</div>
       <form className="w-full" encType="multipart/form-data" onSubmit={handleSubmit}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">

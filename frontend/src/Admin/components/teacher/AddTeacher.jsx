@@ -1,10 +1,11 @@
 import { Button } from "flowbite-react";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { addNewTeacher, clearErrors } from "../../../actions/allAction";
 import FormInput from "../FormInput";
+import MetaData from "../../../components/Layout/MetaData";
 
 function AddTeacher() {
   const dispatch = useDispatch();
@@ -67,7 +68,9 @@ function AddTeacher() {
 
 
    return (
-    <form className="w-full" encType="multipart/form-data" onSubmit={handleSubmit}>
+     <Fragment>
+       <MetaData title={"Add Teacher"}/>
+        <form className="w-full" encType="multipart/form-data" onSubmit={handleSubmit}>
       <div className="grid gap-6 mb-6 md:grid-cols-2">
         <FormInput id="1"
           name="name"
@@ -175,6 +178,7 @@ function AddTeacher() {
         </Button>
       </div>
     </form>
+   </Fragment>
   );
 }
 
