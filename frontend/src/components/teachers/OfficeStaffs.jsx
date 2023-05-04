@@ -1,14 +1,17 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import Loader from '../Layout/loader/Loader';
 // import officestaffphoto from '../../OfiiceStaffsPhoto';
 import TeacherCard from './TeacherCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearErrors, getAllStaffs } from '../../actions/staffAction';
 import MetaData from "../Layout/MetaData";
+import { useParams } from 'react-router-dom';
+import { Pagination } from 'flowbite-react';
 
 const OfficeStaffs = () => {
   const loading = false;
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
+  const keyword = useParams().keyword;
 
   // const data = [
   //   { name: "Most. Khadiza Aktar Bohni", dagignation: "Sr. Office Assistant cum Computer Operator", phone: "01722-304283", email: "sample@gmail.com", img: officestaffphoto },
@@ -22,13 +25,16 @@ const OfficeStaffs = () => {
   //   { name: "Md. Golap mia", dagignation: "M.L.S.S", phone: "01761193974", email: "sample@gmail.com", img: officestaffphoto },
 
   // ]
-  const {error,staffs}=useSelector(state=>state.staffs);
+  const { error, staffs, staffsCount, resultPerPage } = useSelector(state => state.staffs);
+  const [currentPage, setCurrentPage] = useState(1);
+  const onPageChange = (e) => { setCurrentPage(e); }
+
   useEffect(() => {
     if (error) {
         dispatch(clearErrors());
     }
-    dispatch(getAllStaffs());
-}, [error, dispatch])
+    dispatch(getAllStaffs(keyword, currentPage));
+}, [error, dispatch, keyword, currentPage])
   return (
     <Fragment>
       <MetaData title={"Staff"}/>
@@ -40,6 +46,16 @@ const OfficeStaffs = () => {
           </div>
 
         </div></Fragment>)}
+      
+        {resultPerPage < staffsCount && (
+          <div className="text-center mb-2">
+            <Pagination
+              currentPage={currentPage}
+              totalPages={Math.ceil(staffsCount / resultPerPage)}
+              onPageChange={onPageChange}
+            />
+          </div>
+        )}
     </Fragment>
   )
 

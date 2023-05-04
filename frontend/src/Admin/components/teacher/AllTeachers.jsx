@@ -20,8 +20,8 @@ function AllTeachers() {
   }
   const [currentPage, setCurrentPage] = useState(1);
 
-  const onPageChange = (e) => { setCurrentPage(e) }
-
+  const onPageChange = (e) => { setCurrentPage(e); }
+ 
   useEffect(() => {
     if (error) {
       toast(error)
@@ -111,11 +111,12 @@ function AllTeachers() {
               ))}
           </tbody>
         </table>
+        
         {resultPerPage < teachersCount && (
           <div className="text-center mb-2">
             <Pagination
               currentPage={currentPage}
-              totalPages={Math.round(teachersCount / resultPerPage)}
+              totalPages={Math.ceil(teachersCount / resultPerPage)}
               onPageChange={onPageChange}
             />
           </div>

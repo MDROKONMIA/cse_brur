@@ -14,8 +14,10 @@
 # misc
 .idea
 .vscode
+/temp
 /backend/config/config.env
 /frontend/.DS_Store
+/frontend/src/TeachersPhoto/
 /frontend/.env.local
 /frontend/.env.development.local
 /frontend/.env.test.local

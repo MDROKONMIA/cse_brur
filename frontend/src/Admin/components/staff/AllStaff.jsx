@@ -121,7 +121,7 @@ function AllStaffs() {
           <div className="text-center mb-2">
             <Pagination
               currentPage={currentPage}
-              totalPages={Math.round(staffsCount / resultPerPage)}
+              totalPages={Math.ceil(staffsCount / resultPerPage)}
               onPageChange={onPageChange}
             />
           </div>
