@@ -18,7 +18,7 @@ const Labratories = () => {
                         <div className='w-full border-l-gray-700 border-l-2'>
                             <p className="text-4xl text-center font-cursive border-b-2">Hardware Lab</p>
                             <div className='pl-2 '>
-                                <div className='grid grid-cols-4 gap-4 mt-2'>
+                                <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2'>
                                     <div className='relative'>
                                         <h2 className='absolute top-0 left-0 p-2 font-semibold uppercase'>Lab-1</h2>
                                         <img class="h-auto max-w-full rounded-lg" src={lab_1} alt="" />

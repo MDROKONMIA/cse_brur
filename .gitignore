@@ -14,7 +14,7 @@
 # misc
 .idea
 .vscode
-/temp
+temp/
 /backend/config/config.env
 /frontend/.DS_Store
 /frontend/src/TeachersPhoto/

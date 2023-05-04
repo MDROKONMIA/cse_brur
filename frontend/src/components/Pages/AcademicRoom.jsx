@@ -10,7 +10,7 @@ const AcademicRoom = () => {
                 <h2 className='font-cursive text-4xl text-center mb-2 border-b-2 dark:text-gray-300'>Academic Class Room</h2>
 
                 <p className='text-xl text-gray-700 dark:text-gray-300 mb-2'>The Department has 4 class rooms, 4 semantic lab rooms and Virtual Class (V.C) room.</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
                     <div className='relative'>
                         <h2 className='absolute top-0 left-0 p-2 font-semibold uppercase'>Class room-1</h2>
                         <img class="h-auto max-w-full rounded-lg" src={classroom_1} alt="" />
