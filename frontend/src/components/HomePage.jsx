@@ -72,7 +72,7 @@ const HomePage = () => {
             <h2 className='text-xl md:text-2xl font-bold my-1 dark:text-white'>Dr. Md. Mizanur Rahoman</h2>
             <p className='text-gray-600 text-lg md:text-xl dark:text-gray-300'>Professor</p>
             <br />
-            <p className='dark: text-gray-400 text-justify'> Welcome to the department of <span className='text-primary_bg dark:text-white cursor-pointer'>Computer Science & Engineering</span>,
+            <p className='dark:text-gray-400 text-justify'> Welcome to the department of <span className='text-primary_bg dark:text-white cursor-pointer'>Computer Science & Engineering</span>,
               Begum Rokeya University, Rangpur. The Department of Computer Science and Engineering was
               established on 12 October, 2008. It is one of the founding department among six, Begum Rokeya University,
               Rangpur started its journey with. Since the beginning of its establishment, the department has been able to
