@@ -30,7 +30,7 @@ const Sidebar = ({ routes }) => {
                             aria-controls="dropdown-example"
                             data-collapse-toggle="dropdown-example"
                         >
-                            <a href="/" className="flex-1 ml-3 text-left whitespace-nowrap">
+                            <a href="/" onClick={onChageSidebarShow} className="flex-1 ml-3 text-left whitespace-nowrap">
                                 Home
                             </a>
                         </button>
@@ -63,7 +63,8 @@ const Sidebar = ({ routes }) => {
                                         <li>
                                             <Link
                                                 to={subList.url}
-                                                className="flex items-center w-full p-2 text-sm text-gray-300 transition duration-75 rounded-lg pl-4 md:pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                                onClick={onChageSidebarShow}
+                                                className="flex items-center w-full p-2 text-sm text-gray-300 transition duration-75 rounded-lg pl-4 md:pl-11 group hover:bg-gray-700 dark:text-white dark:hover:bg-gray-700"
                                             >
                                                 <span>{subList.title}</span>
                                             </Link>
