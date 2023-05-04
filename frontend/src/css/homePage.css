@@ -20,7 +20,6 @@ ul {
 }
 
 .header-contact-phone {
-  margin-right: 35px;
   position: relative;
   padding-right: 30px;
 }
@@ -31,6 +30,7 @@ ul {
   height: 12px;
   width: 1px;
   top: 8px;
+  margin-right: 20px;
   right: 0;
   background-color: #fff;
 }
@@ -91,24 +91,6 @@ ul {
   top: 2px;
 }
 
-li.shopping-cart a {
-  position: relative;
-}
-
-.shopping-counter {
-  position: absolute;
-  top: -16px;
-  height: 20px;
-  width: 20px;
-  line-height: 20px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #fdc800;
-  color: #444444;
-  font-size: 12px;
-  left: 43px;
-}
-
 .main-menu ul li a {
   @apply font-bold;
   display: inline-block;
@@ -152,7 +134,8 @@ li.shopping-cart a {
   top: 110%;
   transition: all 0.3s ease 0s;
   visibility: hidden;
-  width: 250px;
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: 9;
 }
 
@@ -189,6 +172,62 @@ li.shopping-cart a {
   top: 0;
 }
 
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.closebtn {
+  color: #fff;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s; /* If you want a transition effect */
+  padding: 5px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
 .banner {
   background-image: url("../logo/banner.jpg");
   background-position: center;

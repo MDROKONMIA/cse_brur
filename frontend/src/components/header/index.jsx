@@ -10,10 +10,10 @@ import { logout } from "../../actions/userAction";
 import { toast } from "react-toastify";
 import { BsMoonFill, BsSun } from "react-icons/bs";
 import { useState } from "react";
+import Sidebar from "./Sidebar";
 function Header() {
   const { isAuthenticated, user } = useSelector(state => state.user)
   const mainMenu = [
-    { title: "Home", url: "/" },
     {
       title: "About",
       url: "/",
@@ -72,7 +72,7 @@ function Header() {
     navigate("/login");
 
   }
-  const [theme, setTheme]=useState(localStorage.theme);
+  const [theme, setTheme] = useState(localStorage.theme);
   const handleDarkMood = () => {
     if (theme === 'light') {
       localStorage.theme = 'dark';
@@ -84,9 +84,15 @@ function Header() {
       document.documentElement.classList.remove('dark')
     }
   }
+
+ 
   return (
     <>
       <header>
+
+     
+        <Sidebar routes={ mainMenu} />
+
         <div className="w-full">
           <div className="header-top bg-primary_bg dark:bg-black">
 
@@ -112,7 +118,7 @@ function Header() {
                 <div className="header-social-icon-list">
                   <ul>
                     <li>
-                      <div  onClick={handleDarkMood} className="pr-2 text-white cursor-pointer">{theme==='dark'?(<BsSun/>):(<BsMoonFill/>)}</div>
+                      <div onClick={handleDarkMood} className="pr-2 text-white cursor-pointer">{theme === 'dark' ? (<BsSun />) : (<BsMoonFill />)}</div>
                     </li>
 
                     <li>
@@ -157,10 +163,10 @@ function Header() {
 
                 <div className="xl:4/5 lg:w-4/5 md:w-3/5 w-full">
                   <div className=" w-full text-center dark:text-white">
-                    <h1 className="font-extrabold text-4xl dark:text-white" >
+                    <h1 className="font-extrabold text-2xl sm:text-4xl dark:text-white" >
                       Department of Compuer Science & Enginnering
                     </h1>
-                    <h1 className="font-bold text-lg dark:text-white font-cursive">
+                    <h1 className="font-bold sm:text-lg dark:text-white font-cursive">
                       {" "}
                       Established: 12 October, 2008
                     </h1>
@@ -172,10 +178,14 @@ function Header() {
 
 
 
-          <div className="">
+          <div className="hidden sm:block">
             <div className="main-menu">
+
               <nav id="mobile-menu"></nav>
               <ul className="">
+                <li>
+                <a href="/" className="dark:text-white cursor-pointer">Home</a>
+                </li>
                 {mainMenu.map((menu) => (
                   <>
                     <li>
@@ -183,7 +193,7 @@ function Header() {
                       {/* <a className="dark:text-white">{menu.title}</a> */}
 
                       {menu.submenu ? (
-                        <ul className="submenu">
+                        <ul className="sm:block submenu">
                           {menu.submenu.map((el) => (
                             <li>
                               <a href={el.url}>{el.title}</a>
