@@ -1,35 +1,14 @@
 import React, { useState } from "react";
-import { RiDashboardFill } from "react-icons/ri";
-import { BsFillPeopleFill, BsPeopleFill } from "react-icons/bs";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
-import { IoPersonAddSharp } from "react-icons/io5";
-import { MdViewList } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { ToggleSwitch } from "flowbite-react";
 
 const Sidebar = ({ routes }) => {
 
     const [dropdown, setDropdown] = useState(null);
 
-    const [theme, setTheme] = useState(localStorage.theme);
-    const handleDarkMood = () => {
-        if (theme === 'light') {
-            localStorage.theme = 'dark';
-            setTheme(localStorage.theme)
-            document.documentElement.classList.add('dark');
-        } else {
-            localStorage.theme = 'light';
-            setTheme(localStorage.theme)
-            document.documentElement.classList.remove('dark')
-        }
-    }
-
-
-
     const [isShowSideBar, setShowSideBar] = useState(false);
     const onChageSidebarShow = () => {
         const mySidebar = document.getElementById("mySidebar");
-        const openbtn = document.getElementById("main");
         if (isShowSideBar) {
             mySidebar.style.width = "0"
         } else {
@@ -42,7 +21,7 @@ const Sidebar = ({ routes }) => {
 
         <aside>
             <div id="mySidebar" className={`sidebar ${isShowSideBar ? "w-64" : ""}`}>
-                <a href="javascript:void(0)" className="closebtn " onClick={onChageSidebarShow}>&times;</a>
+                <button  className="closebtn " onClick={onChageSidebarShow}>&times;</button>
                 <ul>
                     <li>
                         <button
