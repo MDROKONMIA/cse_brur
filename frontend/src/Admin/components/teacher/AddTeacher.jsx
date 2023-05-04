@@ -61,6 +61,7 @@ function AddTeacher() {
     if (success) {
       toast(message)
       navigate("/admin/all-teachers");
+      dispatch(clearErrors());
     }
   }, [error, dispatch, success, message, navigate]);
 

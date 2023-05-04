@@ -8,7 +8,6 @@ const cloudinary = require("cloudinary");
 
 exports.sendEmail = catchAsyncErrors(async (req, res, next) => {
   const { from, to, subject, body } = req.body;
-
   try {
     await sendEmail({
       from: from,

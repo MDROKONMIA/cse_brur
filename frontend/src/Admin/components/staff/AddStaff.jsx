@@ -47,6 +47,7 @@ function AddNewStaff() {
     if (success) {
       toast(message);
       navigate("/admin/all-staffs");
+      dispatch(clearErrors());
     }
   }, [error, dispatch, success, message, navigate]);
 
